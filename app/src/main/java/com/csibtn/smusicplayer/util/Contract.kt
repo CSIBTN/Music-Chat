@@ -11,10 +11,7 @@ interface Contract {
     }
 
     interface Model {
-        interface OnFinishedListener {
 
-            fun onFinished(string: String?)
-        }
 
     }
 
