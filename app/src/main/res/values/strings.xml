@@ -4,4 +4,7 @@
     <string name="trending">trending</string>
     <string name="chat">chat</string>
     <string name="list">list</string>
+    <string name="loginHeader">Login</string>
+    <string name="loginHint">Your login:</string>
+    <string name="passwordHint">Your password:</string>
 </resources>
