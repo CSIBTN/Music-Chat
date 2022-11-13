@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">SMusic Player</string>
+    <string name="user">user</string>
+    <string name="trending">trending</string>
+    <string name="chat">chat</string>
+    <string name="list">list</string>
 </resources>
