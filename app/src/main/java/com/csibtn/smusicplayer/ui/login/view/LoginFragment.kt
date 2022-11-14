@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.csibtn.smusicplayer.databinding.FragmentLoginBinding
+import com.csibtn.smusicplayer.ui.main.view.MainActivity
 
 class LoginFragment : Fragment() {
 
@@ -21,6 +22,8 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
+        val parentActivity = activity as (MainActivity)
+        parentActivity.switchOffTheMenu()
         return binding.root
     }
 

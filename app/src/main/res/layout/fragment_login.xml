@@ -21,9 +21,9 @@
         android:id="@+id/tiLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="@dimen/StartEndMargin"
+        android:layout_marginTop="@dimen/TopMargin"
+        android:layout_marginEnd="@dimen/StartEndMargin"
         android:hint="@string/loginHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -40,9 +40,9 @@
         android:id="@+id/tiPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginStart="@dimen/StartEndMargin"
+        android:layout_marginTop="@dimen/TopMargin"
+        android:layout_marginEnd="@dimen/StartEndMargin"
         android:hint="@string/passwordHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -54,6 +54,28 @@
             android:layout_height="wrap_content" />
 
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGoogleLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/TopMargin"
+        android:text="@string/googleLoginText"
+        app:icon="@drawable/ic_google"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tiPassword" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/TopMargin"
+        android:text="@string/registerText"
+        app:icon="@drawable/ic_register"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGoogleLogin" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

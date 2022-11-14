@@ -7,4 +7,6 @@
     <string name="loginHeader">Login</string>
     <string name="loginHint">Your login:</string>
     <string name="passwordHint">Your password:</string>
+    <string name="googleLoginText">Login wIth Google</string>
+    <string name="registerText">Register</string>
 </resources>
