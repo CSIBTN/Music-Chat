@@ -2,9 +2,9 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/chatFragment">
+    app:startDestination="@id/loginFragment">
     <fragment
-        android:id="@+id/chatFragment"
-        android:name="com.csibtn.smusicplayer.ui.chat.view.ChatFragment"
-        android:label="ChatFragment" />
+        android:id="@+id/loginFragment"
+        android:name="com.csibtn.smusicplayer.ui.login.view.LoginFragment"
+        android:label="LoginFragment" />
 </navigation>
