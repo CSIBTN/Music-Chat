@@ -3,10 +3,12 @@ package com.csibtn.smusicplayer.ui.main.view
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.get
 import com.csibtn.smusicplayer.databinding.ActivityMainBinding
+import com.csibtn.smusicplayer.ui.base.view.BaseMVPView
 
-class MainActivity : AppCompatActivity() {
-    lateinit var mainBinding: ActivityMainBinding
+class MainActivity : AppCompatActivity(), BaseMVPView {
+    private lateinit var mainBinding: ActivityMainBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,11 +17,11 @@ class MainActivity : AppCompatActivity() {
         setContentView(mainBinding.root)
     }
 
-    fun switchOffTheMenu() {
+    override fun switchOffTheMenu() {
         mainBinding.bottomNavBar.visibility = View.GONE
     }
 
-    fun switchOnTheMenu() {
+    override fun switchOnTheMenu() {
         mainBinding.bottomNavBar.visibility = View.VISIBLE
     }
 }
