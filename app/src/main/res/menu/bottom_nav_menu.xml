@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/user"
+        android:id="@+id/chat"
         android:enabled="true"
-        android:icon="@drawable/ic_user"
-        android:title="@string/user" />
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat" />
     <item
         android:id="@+id/trends"
         android:enabled="true"
         android:icon="@drawable/ic_trending"
         android:title="@string/trending" />
     <item
-        android:id="@+id/chat"
-        android:enabled="true"
-        android:icon="@drawable/ic_chat"
-        android:title="@string/chat" />
-    <item
         android:id="@+id/findChat"
         android:enabled="true"
         android:icon="@drawable/ic_list"
         android:title="@string/list" />
+    <item
+        android:id="@+id/user"
+        android:enabled="true"
+        android:icon="@drawable/ic_user"
+        android:title="@string/user" />
 </menu>

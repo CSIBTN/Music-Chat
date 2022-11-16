@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.csibtn.smusicplayer.databinding.FragmentLoginBinding
 import com.csibtn.smusicplayer.ui.main.view.MainActivity
 
@@ -24,6 +25,11 @@ class LoginFragment : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val parentActivity = activity as (MainActivity)
         parentActivity.switchOffTheMenu()
+        binding.btnRegister.setOnClickListener {
+            findNavController().navigate(
+                LoginFragmentDirections.showChats()
+            )
+        }
         return binding.root
     }
 
