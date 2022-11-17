@@ -8,8 +8,14 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.csibtn.smusicplayer.databinding.FragmentLoginBinding
 import com.csibtn.smusicplayer.ui.main.view.MainActivity
+import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
-class LoginFragment : Fragment() {
+@AndroidEntryPoint
+class LoginFragment() : Fragment() {
+
+    @Inject
+    lateinit var auth: Authenticator
 
     private var _binding: FragmentLoginBinding? = null
     private val binding: FragmentLoginBinding
