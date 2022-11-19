@@ -1,22 +1,19 @@
 package com.csibtn.smusicplayer.ui.login.register
 
-import android.view.View
+import com.csibtn.smusicplayer.ui.base.presenter.BasePresenter
 
 interface RegisterContract {
     interface RegisterMVPView {
 
     }
 
-    interface RegisterPresenter {
+    interface RegisterPresenter : BasePresenter {
         suspend fun signUpUser(
             email: String,
             password: String,
             onSuccessCallback: () -> Unit,
             onFailureCallback: () -> Unit
         )
-
-        fun onAttachView(view: View)
-        fun onDetachView()
     }
 
     interface RegisterRepository {

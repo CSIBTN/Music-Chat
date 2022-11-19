@@ -2,6 +2,7 @@ package com.csibtn.smusicplayer.ui.login.register.presenter
 
 import android.view.View
 import com.csibtn.smusicplayer.data.database.DatabaseRepository
+import com.csibtn.smusicplayer.ui.base.presenter.BasePresenter
 import com.csibtn.smusicplayer.ui.login.register.RegisterContract
 
 

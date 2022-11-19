@@ -42,7 +42,13 @@ class FirebaseAuthenticator : Authenticator {
         onSuccessCallback: () -> Unit,
         onFailedCallback: () -> Unit
     ) {
-        Firebase.auth.signInWithEmailAndPassword(email, password)
+        Firebase.auth.signInWithEmailAndPassword(email, password).addOnCompleteListener { task ->
+            if (task.isSuccessful) {
+                onSuccessCallback()
+            } else {
+                onFailedCallback()
+            }
+        }
     }
 
 }

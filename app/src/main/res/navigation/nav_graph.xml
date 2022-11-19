@@ -10,6 +10,9 @@
         <action
             android:id="@+id/register_user"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/openChat"
+            app:destination="@id/chatFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"

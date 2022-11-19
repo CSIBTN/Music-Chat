@@ -61,7 +61,7 @@ class RegisterFragment : Fragment(), RegisterContract.RegisterMVPView {
                     {
                         Toast.makeText(
                             context,
-                            "AUTHENTICATION HAVA FAILED!",
+                            "REGISTRATION HAVE FAILED!",
                             Toast.LENGTH_SHORT
                         ).show()
                     })

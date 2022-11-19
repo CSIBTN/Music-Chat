@@ -1,12 +1,13 @@
 package com.csibtn.smusicplayer.data.database
 
+import com.csibtn.smusicplayer.ui.login.LoginContract
 import com.csibtn.smusicplayer.ui.login.register.RegisterContract
 import com.csibtn.smusicplayer.ui.login.view.Authenticator
 import com.csibtn.smusicplayer.ui.login.view.FirebaseAuthenticator
 
 
 object DatabaseRepository :
-    RegisterContract.RegisterRepository {
+    RegisterContract.RegisterRepository, LoginContract.LoginRepository {
     private val authenticator: Authenticator = FirebaseAuthenticator()
 
     override suspend fun createUser(
@@ -20,6 +21,20 @@ object DatabaseRepository :
             password,
             onSuccessCallback,
             onFailureCallback
+        )
+    }
+
+    override suspend fun signIn(
+        email: String,
+        password: String,
+        onSuccessCallback: () -> Unit,
+        onFailedCallback: () -> Unit
+    ) {
+        authenticator.signInWithEmailAndPassword(
+            email,
+            password,
+            onSuccessCallback,
+            onFailedCallback
         )
     }
 }
