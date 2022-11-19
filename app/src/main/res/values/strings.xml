@@ -1,12 +1,16 @@
 <resources>
     <string name="app_name">SMusic Player</string>
-    <string name="user">user</string>
-    <string name="trending">trending</string>
-    <string name="chat">chats</string>
-    <string name="list">list</string>
+    <string name="user">User</string>
+    <string name="trending">Trending</string>
+    <string name="chat">Сhats</string>
+    <string name="list">List</string>
     <string name="loginHeader">Login</string>
     <string name="loginHint">Your login:</string>
     <string name="passwordHint">Your password:</string>
     <string name="googleLoginText">Login wIth Google</string>
     <string name="registerText">Register</string>
+    <string name="registerHeader">Register</string>
+    <string name="emailHint">E-mail</string>
+    <string name="signInBtn">Sign In</string>
+    <string name="signUpBtn">Sign Up</string>
 </resources>

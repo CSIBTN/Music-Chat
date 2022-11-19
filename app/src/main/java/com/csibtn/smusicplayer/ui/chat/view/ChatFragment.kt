@@ -6,10 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.csibtn.smusicplayer.databinding.FragmentChatBinding
-import com.csibtn.smusicplayer.ui.base.view.BaseMVPView
 import com.csibtn.smusicplayer.ui.main.view.MainActivity
 
-class ChatFragment : Fragment(), BaseMVPView {
+class ChatFragment : Fragment() {
     private var _binding: FragmentChatBinding? = null
     private val binding: FragmentChatBinding
         get() = checkNotNull(_binding) {
@@ -26,12 +25,7 @@ class ChatFragment : Fragment(), BaseMVPView {
         return binding.root
     }
 
-    override fun switchOffTheMenu() {
-        val parentActivity = activity as (MainActivity)
-        parentActivity.switchOffTheMenu()
-    }
-
-    override fun switchOnTheMenu() {
+    private fun switchOnTheMenu() {
         val parentActivity = activity as (MainActivity)
         parentActivity.switchOnTheMenu()
     }

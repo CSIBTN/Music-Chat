@@ -3,7 +3,9 @@ package com.csibtn.smusicplayer.util
 import android.app.Application
 import android.os.Build
 import com.google.android.material.color.DynamicColors
+import dagger.hilt.android.HiltAndroidApp
 
+@HiltAndroidApp
 class MusicChatApplication : Application() {
     override fun onCreate() {
         super.onCreate()
