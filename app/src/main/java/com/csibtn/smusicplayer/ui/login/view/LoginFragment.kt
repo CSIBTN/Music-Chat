@@ -16,7 +16,6 @@ class LoginFragment() : Fragment() {
 
     @Inject
     lateinit var auth: Authenticator
-
     private var _binding: FragmentLoginBinding? = null
     private val binding: FragmentLoginBinding
         get() = checkNotNull(_binding) {
@@ -31,11 +30,7 @@ class LoginFragment() : Fragment() {
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val parentActivity = activity as (MainActivity)
         parentActivity.switchOffTheMenu()
-        binding.btnRegister.setOnClickListener {
-            findNavController().navigate(
-                LoginFragmentDirections.showChats()
-            )
-        }
+        addListeners()
         return binding.root
     }
 
@@ -43,5 +38,12 @@ class LoginFragment() : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         _binding = null
+    }
+    private fun addListeners() {
+        binding.btnRegister.setOnClickListener {
+            findNavController().navigate(
+                LoginFragmentDirections.registerUser()
+            )
+        }
     }
 }

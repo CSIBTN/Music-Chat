@@ -9,4 +9,8 @@
     <string name="passwordHint">Your password:</string>
     <string name="googleLoginText">Login wIth Google</string>
     <string name="registerText">Register</string>
+    <string name="registerHeader">Register</string>
+    <string name="emailHint">E-mail</string>
+    <string name="signInBtn">Sign In</string>
+    <string name="signUpBtn">Sign Up</string>
 </resources>

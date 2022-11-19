@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "422893142507",
-    "project_id": "smusic-chat-5a166",
-    "storage_bucket": "smusic-chat-5a166.appspot.com"
+    "project_number": "523218804253",
+    "project_id": "smusic-chat",
+    "storage_bucket": "smusic-chat.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:422893142507:android:36276bbc061c87d2c599ae",
+        "mobilesdk_app_id": "1:523218804253:android:4c3ed4467b50277ec530f4",
         "android_client_info": {
           "package_name": "com.csibtn.smusicplayer"
         }
       },
       "oauth_client": [
         {
-          "client_id": "422893142507-s0ult58b6fldhibkt5tl9561sptg1led.apps.googleusercontent.com",
+          "client_id": "523218804253-d42futossut6i6nc9j01ho836cs5mvo3.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD1A1ivTRv4mo605EfboOtpNznZ4DVK_v0"
+          "current_key": "AIzaSyAAWw3-sDrCNWhj4sXb_9GUvYYkKaLDKFc"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "422893142507-s0ult58b6fldhibkt5tl9561sptg1led.apps.googleusercontent.com",
+              "client_id": "523218804253-d42futossut6i6nc9j01ho836cs5mvo3.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
