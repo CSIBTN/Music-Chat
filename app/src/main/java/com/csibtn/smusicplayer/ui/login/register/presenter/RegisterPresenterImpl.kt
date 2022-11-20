@@ -1,23 +1,29 @@
 package com.csibtn.smusicplayer.ui.login.register.presenter
 
 import android.view.View
-import com.csibtn.smusicplayer.data.database.DatabaseRepository
-import com.csibtn.smusicplayer.ui.base.presenter.BasePresenter
+import com.csibtn.smusicplayer.data.database.AuthRepository
 import com.csibtn.smusicplayer.ui.login.register.RegisterContract
 
 
 class RegisterPresenterImpl : RegisterContract.RegisterPresenter {
 
     private var registerView: View? = null
-    private val registerRepository: RegisterContract.RegisterRepository = DatabaseRepository
+    private val registerRepository: RegisterContract.RegisterRepository = AuthRepository
 
     override suspend fun signUpUser(
         email: String,
         password: String,
+        userName: String,
         onSuccessCallback: () -> Unit,
         onFailureCallback: () -> Unit
     ) {
-        registerRepository.createUser(email, password, onSuccessCallback, onFailureCallback)
+        registerRepository.createUser(
+            email,
+            password,
+            userName,
+            onSuccessCallback,
+            onFailureCallback
+        )
     }
 
     override fun onAttachView(view: View) {

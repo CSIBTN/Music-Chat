@@ -11,6 +11,7 @@ interface RegisterContract {
         suspend fun signUpUser(
             email: String,
             password: String,
+            userName: String,
             onSuccessCallback: () -> Unit,
             onFailureCallback: () -> Unit
         )
@@ -20,6 +21,7 @@ interface RegisterContract {
         suspend fun createUser(
             email: String,
             password: String,
+            userName : String,
             onSuccessCallback: () -> Unit,
             onFailureCallback: () -> Unit
         )

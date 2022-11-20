@@ -49,10 +49,13 @@ class RegisterFragment : Fragment(), RegisterContract.RegisterMVPView {
 
     private fun addListeners() {
         binding.btnSignUp.setOnClickListener() {
+
             val email = binding.tiEmail.editText?.text.toString()
             val password = binding.tiPassword.editText?.text.toString()
+            val userName = binding.tiLogin.editText?.text.toString()
+
             viewLifecycleOwner.lifecycleScope.launch {
-                registerPresenter.signUpUser(email, password,
+                registerPresenter.signUpUser(email, password, userName,
                     {
                         findNavController().navigate(
                             RegisterFragmentDirections.openChat()
