@@ -15,7 +15,7 @@ import com.csibtn.smusicplayer.ui.login.register.view.RegisterFragmentDirections
 import com.csibtn.smusicplayer.ui.main.view.MainActivity
 import kotlinx.coroutines.launch
 
-class LoginFragment() : Fragment() {
+class LoginFragment() : Fragment(), LoginContract.LoginMVPView {
 
 
     private var _binding: FragmentLoginBinding? = null
@@ -30,6 +30,7 @@ class LoginFragment() : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        showChatIfLoggedIn()
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val parentActivity = activity as (MainActivity)
         parentActivity.switchOffTheMenu()
@@ -71,6 +72,16 @@ class LoginFragment() : Fragment() {
                             Toast.LENGTH_SHORT
                         ).show()
                     })
+            }
+        }
+    }
+
+    override fun showChatIfLoggedIn() {
+        viewLifecycleOwner.lifecycleScope.launch {
+            if (loginPresenter.checkIfLoggedIn()) {
+                findNavController().navigate(
+                    RegisterFragmentDirections.openChat()
+                )
             }
         }
     }

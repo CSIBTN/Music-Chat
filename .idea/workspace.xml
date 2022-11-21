@@ -10,20 +10,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac4c6174-059e-4f1e-8512-3f1334f0ed39" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/data/database/user/MessageList.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/ic_dummy_user.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/custom_styles.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/assetWizardSettings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/chat_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/chat_item.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/dim.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/dim.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/data/database/AuthRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/data/database/AuthRepository.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/ui/login/LoginContract.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/ui/login/LoginContract.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/ui/login/presenter/LoginPresenterImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/ui/login/presenter/LoginPresenterImpl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/ui/login/view/Authenticator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/ui/login/view/Authenticator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/ui/login/view/LoginFragment.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/csibtn/smusicplayer/ui/login/view/LoginFragment.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\ichig\.android\avd\Pixel_2_XL_API_28.avd]" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="device_and_snapshot_combo_box_target[C:\Users\ichig\.android\avd\Pixel_6_Pro_API_33_2.avd]" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />

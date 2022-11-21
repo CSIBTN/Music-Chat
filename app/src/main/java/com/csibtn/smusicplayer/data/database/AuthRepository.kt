@@ -39,4 +39,8 @@ object AuthRepository :
             onFailedCallback
         )
     }
+
+    override suspend fun checkIfLoggedIn(): Boolean {
+        return authenticator.checkIfLoggedIn()
+    }
 }

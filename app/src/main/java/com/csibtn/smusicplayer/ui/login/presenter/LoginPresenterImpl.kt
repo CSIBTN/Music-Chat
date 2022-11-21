@@ -18,6 +18,10 @@ class LoginPresenterImpl : LoginContract.LoginPresenter {
         loginRepository.signIn(email, password, onSuccessCallback, onFailedCallback)
     }
 
+    override suspend fun checkIfLoggedIn(): Boolean {
+        return loginRepository.checkIfLoggedIn();
+    }
+
     override fun onAttachView(view: View) {
         loginView = view
     }

@@ -20,6 +20,7 @@ interface Authenticator {
         onSuccessCallback: () -> Unit,
         onFailedCallback: () -> Unit
     )
+    suspend fun checkIfLoggedIn() : Boolean
 }
 
 class FirebaseAuthenticator : Authenticator {
@@ -57,6 +58,10 @@ class FirebaseAuthenticator : Authenticator {
                 onFailedCallback()
             }
         }
+    }
+
+    override suspend fun checkIfLoggedIn(): Boolean {
+        return auth.currentUser != null
     }
 
 }
