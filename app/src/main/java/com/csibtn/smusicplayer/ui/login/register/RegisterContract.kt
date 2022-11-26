@@ -1,9 +1,11 @@
 package com.csibtn.smusicplayer.ui.login.register
 
 import com.csibtn.smusicplayer.ui.base.presenter.BasePresenter
+import com.csibtn.smusicplayer.ui.base.view.BaseMVPView
+import com.csibtn.smusicplayer.ui.login.register.view.RegisterFragment
 
 interface RegisterContract {
-    interface RegisterMVPView {
+    interface RegisterMVPView : BaseMVPView{
 
     }
 
@@ -13,7 +15,8 @@ interface RegisterContract {
             password: String,
             userName: String,
             onSuccessCallback: () -> Unit,
-            onFailureCallback: () -> Unit
+            onFailureCallback: () -> Unit,
+            fragment: RegisterFragment
         )
     }
 
@@ -23,7 +26,8 @@ interface RegisterContract {
             password: String,
             userName : String,
             onSuccessCallback: () -> Unit,
-            onFailureCallback: () -> Unit
+            onFailureCallback: () -> Unit,
+            fragment: RegisterFragment
         )
     }
 }

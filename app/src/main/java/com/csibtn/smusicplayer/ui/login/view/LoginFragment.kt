@@ -13,7 +13,9 @@ import com.csibtn.smusicplayer.ui.login.LoginContract
 import com.csibtn.smusicplayer.ui.login.presenter.LoginPresenterImpl
 import com.csibtn.smusicplayer.ui.login.register.view.RegisterFragmentDirections
 import com.csibtn.smusicplayer.ui.main.view.MainActivity
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
+import kotlinx.coroutines.runBlocking
 
 class LoginFragment() : Fragment(), LoginContract.LoginMVPView {
 
@@ -30,10 +32,11 @@ class LoginFragment() : Fragment(), LoginContract.LoginMVPView {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        showChatIfLoggedIn()
+            showChatIfLoggedIn()
         _binding = FragmentLoginBinding.inflate(inflater, container, false)
         val parentActivity = activity as (MainActivity)
         parentActivity.switchOffTheMenu()
+        activity?.actionBar?.hide()
         addListeners()
         return binding.root
     }
@@ -44,13 +47,7 @@ class LoginFragment() : Fragment(), LoginContract.LoginMVPView {
     }
 
 
-    override fun onDestroy() {
-        super.onDestroy()
-        loginPresenter.onDetachView()
-        _binding = null
-    }
-
-    private fun addListeners() {
+    override fun addListeners() {
         binding.btnRegister.setOnClickListener {
             findNavController().navigate(
                 LoginFragmentDirections.registerUser()
@@ -76,9 +73,16 @@ class LoginFragment() : Fragment(), LoginContract.LoginMVPView {
         }
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        loginPresenter.onDetachView()
+        _binding = null
+    }
+
     override fun showChatIfLoggedIn() {
         viewLifecycleOwner.lifecycleScope.launch {
-            if (loginPresenter.checkIfLoggedIn()) {
+            val value = loginPresenter.checkIfLoggedIn()
+            if (value) {
                 findNavController().navigate(
                     RegisterFragmentDirections.openChat()
                 )

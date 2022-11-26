@@ -13,5 +13,5 @@ import javax.inject.Singleton
 object AuthModule {
     @Provides
     @Singleton
-    fun providesFirebase(): Authenticator = FirebaseAuthenticator()
+    fun providesFirebase(): Authenticator = FirebaseAuthenticator
 }

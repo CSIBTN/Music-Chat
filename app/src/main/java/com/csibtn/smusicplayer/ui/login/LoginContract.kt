@@ -1,9 +1,10 @@
 package com.csibtn.smusicplayer.ui.login
 
 import com.csibtn.smusicplayer.ui.base.presenter.BasePresenter
+import com.csibtn.smusicplayer.ui.base.view.BaseMVPView
 
 interface LoginContract {
-    interface LoginMVPView {
+    interface LoginMVPView : BaseMVPView{
         fun showChatIfLoggedIn()
     }
 

@@ -31,6 +31,7 @@ class RegisterFragment : Fragment(), RegisterContract.RegisterMVPView {
         savedInstanceState: Bundle?
     ): View {
         _binding = FragmentRegisterBinding.inflate(inflater, container, false)
+        activity?.actionBar?.hide()
         addListeners()
         return binding.root
     }
@@ -47,7 +48,7 @@ class RegisterFragment : Fragment(), RegisterContract.RegisterMVPView {
         _binding = null
     }
 
-    private fun addListeners() {
+    override fun addListeners() {
         binding.btnSignUp.setOnClickListener() {
 
             val email = binding.tiEmail.editText?.text.toString()
@@ -55,7 +56,8 @@ class RegisterFragment : Fragment(), RegisterContract.RegisterMVPView {
             val userName = binding.tiLogin.editText?.text.toString()
 
             viewLifecycleOwner.lifecycleScope.launch {
-                registerPresenter.signUpUser(email, password, userName,
+                registerPresenter.signUpUser(
+                    email, password, userName,
                     {
                         findNavController().navigate(
                             RegisterFragmentDirections.openChat()
@@ -67,7 +69,9 @@ class RegisterFragment : Fragment(), RegisterContract.RegisterMVPView {
                             "REGISTRATION HAVE FAILED!",
                             Toast.LENGTH_SHORT
                         ).show()
-                    })
+                    },
+                    this@RegisterFragment
+                )
             }
         }
     }
